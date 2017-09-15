@@ -95,31 +95,183 @@
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">[[</span>1 2 3]
  <span class="o">[</span>4 5 6]]</code></pre></figure>
 
-<h1 id="installation">Installation</h1>
-<p>System configuration we tested on is  <code class="highlighter-rouge">ubuntu 16.04</code> with <code class="highlighter-rouge">python3</code>. For easy installation of packages in python, we recommend installing <code class="highlighter-rouge">pip</code> - a package managment tool for python.</p>
+<h1 id="scipy">SciPy</h1>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo apt-get install python3-pip</code></pre></figure>
+<p>SciPy is a collection of functions for scientific computing in Python. functionality like advanced linear algebra routines, mathematical function optimization, signal processing, statistical distributions etc.</p>
 
-<p>we will be using <a href="http://scikit-learn.org/stable/index.html">scikitlearn</a> an open source machine learning library. Since <code class="highlighter-rouge">scikitlearn</code> has dependencies on other packages, we also need to install them.</p>
+<p>Sample usage of SciPy:</p>
 
-<p>for <code class="highlighter-rouge">Python 2.7</code></p>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">sparse</span>
+<span class="c"># Create a 2D NumPy array with diagonal of ones, and zeros everywhere else</span>
+<span class="n">eye</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">eye</span><span class="p">)</span>
+</code></pre>
+</div>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">pip install numpy scipy matplotlib ipython scikit-learn pandas</code></pre></figure>
+<div class="highlighter-rouge"><pre class="highlight"><code>[[ 1.  0.  0.  0.]
+ [ 0.  1.  0.  0.]
+ [ 0.  0.  1.  0.]
+ [ 0.  0.  0.  1.]]
+</code></pre>
+</div>
 
-<p>for <code class="highlighter-rouge">Python 3</code></p>
+<p>[click <a href="https://docs.scipy.org/doc/numpy-1.13.0/reference/generated/numpy.eye.html">numpy.eye</a> for more information]</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">pip3 install numpy scipy matplotlib ipython scikit-learn pandas</code></pre></figure>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c">#Convert the NumPy array to a SciPy sparse matrix in CSR Format</span>
+<span class="c">#only the Non-Zero entries are stored</span>
+<span class="n">sparse_matrix</span> <span class="o">=</span> <span class="n">sparse</span><span class="o">.</span><span class="n">csr_matrix</span><span class="p">(</span><span class="n">eye</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sparse_matrix</span><span class="p">)</span>
+</code></pre>
+</div>
 
-<h1 id="jupyter-notebook">Jupyter Notebook</h1>
-<p>For interactive python, you can use <a href="http://jupyter.org/">jupyter</a>.</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>  (0, 0)	1.0
+  (1, 1)	1.0
+  (2, 2)	1.0
+  (3, 3)	1.0
+</code></pre>
+</div>
 
-<p>Install Jupyter</p>
+<p>[click <a href="http://www.scipy-lectures.org/advanced/scipy_sparse/csr_matrix.html">CSR format</a> for more information]</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">pip install jupyter</code></pre></figure>
+<h1 id="matplotlib">Matplotlib</h1>
 
-<p>To start <code class="highlighter-rouge">Jupyter</code></p>
+<p><code class="highlighter-rouge">matplotlib</code> is the primary scientific plotting library in Python.</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">jupyter notebook</code></pre></figure>
+<p>Sample usage:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="c">#Generate a sequence of numbers from -10 to 10 with 100 steps in between</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+<span class="c"># Create a second array using sine</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="c"># The plot function  makes a line chart of one array against another</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">marker</span><span class="o">=</span><span class="s">"x"</span><span class="p">)</span>
+</code></pre>
+</div>
+<p><a href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.linspace.html">np.linspace</a> for more information</p>
+
+<p>OUTPUT:</p>
+
+<p><img src="/images/Lesson1_4_1.png" alt="png" /></p>
+
+<p><code class="highlighter-rouge">Simple line plot of the sine function using matplotlib</code></p>
+
+<h1 id="pandas">Pandas</h1>
+
+<p>Pandas is a python library for data wrangling and analysis.</p>
+
+<p>Sample usage:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<span class="c"># Create a simple dataset of people</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s">'Name'</span><span class="p">:</span> <span class="p">[</span><span class="s">"John"</span><span class="p">,</span><span class="s">"Anna"</span><span class="p">,</span><span class="s">"Peter"</span><span class="p">,</span><span class="s">"Linda"</span><span class="p">,</span><span class="s">"Ajay"</span><span class="p">],</span>
+       <span class="s">'Location'</span><span class="p">:[</span><span class="s">"New York"</span><span class="p">,</span><span class="s">"Paris"</span><span class="p">,</span><span class="s">"Berlin"</span><span class="p">,</span><span class="s">"London"</span><span class="p">,</span><span class="s">"New Delhi"</span><span class="p">],</span>
+       <span class="s">'Age'</span><span class="p">:[</span><span class="mi">23</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">26</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">34</span><span class="p">]}</span>
+<span class="n">data_pandas</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">data_pandas</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Age</th>
+      <th>Location</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>23</td>
+      <td>New York</td>
+      <td>John</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>25</td>
+      <td>Paris</td>
+      <td>Anna</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>26</td>
+      <td>Berlin</td>
+      <td>Peter</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>21</td>
+      <td>London</td>
+      <td>Linda</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>34</td>
+      <td>New Delhi</td>
+      <td>Ajay</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3 id="some-query-operation">Some Query operation</h3>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># Select all rows that have an age column greater than 30</span>
+<span class="n">display</span><span class="p">(</span><span class="n">data_pandas</span><span class="p">[</span><span class="n">data_pandas</span><span class="o">.</span><span class="n">Age</span> <span class="o">&gt;</span> <span class="mi">30</span><span class="p">])</span>
+</code></pre>
+</div>
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Age</th>
+      <th>Location</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>4</th>
+      <td>34</td>
+      <td>New Delhi</td>
+      <td>Ajay</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
 
   </div>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-09-15T17:55:20+05:30</updated><id>http://localhost:4000/</id><title type="html">Introduction to Machine Learning with Python</title><subtitle>This is an Introduction to machine Learning using python. We will using some of the most common open source machine packages.</subtitle><entry><title type="html">Lesson-2: Essential Libraries and Tools</title><link href="http://localhost:4000/lesson/2017/09/15/Lesson-2-essential-library-and-tools.html" rel="alternate" type="text/html" title="Lesson-2: Essential Libraries and Tools" /><published>2017-09-15T16:31:56+05:30</published><updated>2017-09-15T16:31:56+05:30</updated><id>http://localhost:4000/lesson/2017/09/15/Lesson-2-essential-library-and-tools</id><content type="html" xml:base="http://localhost:4000/lesson/2017/09/15/Lesson-2-essential-library-and-tools.html">&lt;h1 id=&quot;numpy&quot;&gt;Numpy&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-09-15T18:36:31+05:30</updated><id>http://localhost:4000/</id><title type="html">Introduction to Machine Learning with Python</title><subtitle>This is an Introduction to machine Learning using python. We will using some of the most common open source machine packages.</subtitle><entry><title type="html">Lesson-2: Essential Libraries and Tools</title><link href="http://localhost:4000/lesson/2017/09/15/Lesson-2-essential-library-and-tools.html" rel="alternate" type="text/html" title="Lesson-2: Essential Libraries and Tools" /><published>2017-09-15T16:31:56+05:30</published><updated>2017-09-15T16:31:56+05:30</updated><id>http://localhost:4000/lesson/2017/09/15/Lesson-2-essential-library-and-tools</id><content type="html" xml:base="http://localhost:4000/lesson/2017/09/15/Lesson-2-essential-library-and-tools.html">&lt;h1 id=&quot;numpy&quot;&gt;Numpy&lt;/h1&gt;
 
 &lt;p&gt;Numpy is one of the fundamental packages for scientific computing in python. The core functionality of NumPy is the &lt;code class=&quot;highlighter-rouge&quot;&gt;ndarray&lt;/code&gt; class, a multidimensional(n-d) array. All elements of the arrays must be of the same type.&lt;/p&gt;
 
@@ -12,6 +12,186 @@
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt;1 2 3]
  &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;4 5 6]]&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h1 id=&quot;scipy&quot;&gt;SciPy&lt;/h1&gt;
+
+&lt;p&gt;SciPy is a collection of functions for scientific computing in Python. functionality like advanced linear algebra routines, mathematical function optimization, signal processing, statistical distributions etc.&lt;/p&gt;
+
+&lt;p&gt;Sample usage of SciPy:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;np&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;scipy&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sparse&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Create a 2D NumPy array with diagonal of ones, and zeros everywhere else&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;eye&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;eye&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;eye&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[[ 1.  0.  0.  0.]
+ [ 0.  1.  0.  0.]
+ [ 0.  0.  1.  0.]
+ [ 0.  0.  0.  1.]]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;[click &lt;a href=&quot;https://docs.scipy.org/doc/numpy-1.13.0/reference/generated/numpy.eye.html&quot;&gt;numpy.eye&lt;/a&gt; for more information]&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#Convert the NumPy array to a SciPy sparse matrix in CSR Format&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#only the Non-Zero entries are stored&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;sparse_matrix&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sparse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;csr_matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;eye&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sparse_matrix&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  (0, 0)	1.0
+  (1, 1)	1.0
+  (2, 2)	1.0
+  (3, 3)	1.0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;[click &lt;a href=&quot;http://www.scipy-lectures.org/advanced/scipy_sparse/csr_matrix.html&quot;&gt;CSR format&lt;/a&gt; for more information]&lt;/p&gt;
+
+&lt;h1 id=&quot;matplotlib&quot;&gt;Matplotlib&lt;/h1&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;matplotlib&lt;/code&gt; is the primary scientific plotting library in Python.&lt;/p&gt;
+
+&lt;p&gt;Sample usage:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;matplotlib&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;inline&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;plt&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#Generate a sequence of numbers from -10 to 10 with 100 steps in between&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;linspace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Create a second array using sine&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# The plot function  makes a line chart of one array against another&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;marker&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;x&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://docs.scipy.org/doc/numpy/reference/generated/numpy.linspace.html&quot;&gt;np.linspace&lt;/a&gt; for more information&lt;/p&gt;
+
+&lt;p&gt;OUTPUT:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Lesson1_4_1.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Simple line plot of the sine function using matplotlib&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;pandas&quot;&gt;Pandas&lt;/h1&gt;
+
+&lt;p&gt;Pandas is a python library for data wrangling and analysis.&lt;/p&gt;
+
+&lt;p&gt;Sample usage:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pandas&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pd&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Create a simple dataset of people&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Name'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;John&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Anna&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Peter&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Linda&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Ajay&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+       &lt;span class=&quot;s&quot;&gt;'Location'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;New York&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Paris&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Berlin&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;London&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;New Delhi&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+       &lt;span class=&quot;s&quot;&gt;'Age'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;23&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;26&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;21&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;34&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]}&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;data_pandas&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DataFrame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data_pandas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+&lt;style&gt;
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+&lt;/style&gt;
+&lt;table border=&quot;1&quot; class=&quot;dataframe&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&quot;text-align: right;&quot;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;Age&lt;/th&gt;
+      &lt;th&gt;Location&lt;/th&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;0&lt;/th&gt;
+      &lt;td&gt;23&lt;/td&gt;
+      &lt;td&gt;New York&lt;/td&gt;
+      &lt;td&gt;John&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;td&gt;25&lt;/td&gt;
+      &lt;td&gt;Paris&lt;/td&gt;
+      &lt;td&gt;Anna&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2&lt;/th&gt;
+      &lt;td&gt;26&lt;/td&gt;
+      &lt;td&gt;Berlin&lt;/td&gt;
+      &lt;td&gt;Peter&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;3&lt;/th&gt;
+      &lt;td&gt;21&lt;/td&gt;
+      &lt;td&gt;London&lt;/td&gt;
+      &lt;td&gt;Linda&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;4&lt;/th&gt;
+      &lt;td&gt;34&lt;/td&gt;
+      &lt;td&gt;New Delhi&lt;/td&gt;
+      &lt;td&gt;Ajay&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;some-query-operation&quot;&gt;Some Query operation&lt;/h3&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Select all rows that have an age column greater than 30&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data_pandas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data_pandas&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Age&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+&lt;style&gt;
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+&lt;/style&gt;
+&lt;table border=&quot;1&quot; class=&quot;dataframe&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&quot;text-align: right;&quot;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;Age&lt;/th&gt;
+      &lt;th&gt;Location&lt;/th&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;4&lt;/th&gt;
+      &lt;td&gt;34&lt;/td&gt;
+      &lt;td&gt;New Delhi&lt;/td&gt;
+      &lt;td&gt;Ajay&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;</content><author><name></name></author><summary type="html">Numpy</summary></entry><entry><title type="html">Lesson-1: Installation</title><link href="http://localhost:4000/lesson/2017/09/15/Lesson-1-Introduction.html" rel="alternate" type="text/html" title="Lesson-1: Installation" /><published>2017-09-15T16:31:56+05:30</published><updated>2017-09-15T16:31:56+05:30</updated><id>http://localhost:4000/lesson/2017/09/15/Lesson-1-Introduction</id><content type="html" xml:base="http://localhost:4000/lesson/2017/09/15/Lesson-1-Introduction.html">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+
+&lt;p&gt;Machine learning is about extracting knowledge from data. It is a research field at the intersection of &lt;code class=&quot;highlighter-rouge&quot;&gt;statistics&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;artificial inteligence&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;computer science&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h1 id=&quot;installation&quot;&gt;Installation&lt;/h1&gt;
 &lt;p&gt;System configuration we tested on is  &lt;code class=&quot;highlighter-rouge&quot;&gt;ubuntu 16.04&lt;/code&gt; with &lt;code class=&quot;highlighter-rouge&quot;&gt;python3&lt;/code&gt;. For easy installation of packages in python, we recommend installing &lt;code class=&quot;highlighter-rouge&quot;&gt;pip&lt;/code&gt; - a package managment tool for python.&lt;/p&gt;
@@ -37,7 +217,7 @@
 
 &lt;p&gt;To start &lt;code class=&quot;highlighter-rouge&quot;&gt;Jupyter&lt;/code&gt;&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;jupyter notebook&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name></name></author><summary type="html">Numpy</summary></entry><entry><title type="html">Lesson-1: Installation</title><link href="http://localhost:4000/lesson/2017/09/15/Lesson-1-Introduction.html" rel="alternate" type="text/html" title="Lesson-1: Installation" /><published>2017-09-15T16:31:56+05:30</published><updated>2017-09-15T16:31:56+05:30</updated><id>http://localhost:4000/lesson/2017/09/15/Lesson-1-Introduction</id><content type="html" xml:base="http://localhost:4000/lesson/2017/09/15/Lesson-1-Introduction.html">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;jupyter notebook&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name></name></author><summary type="html">Introduction</summary></entry><entry><title type="html">Lesson-3: A First Application: Classifying Iris Species</title><link href="http://localhost:4000/lesson/2017/09/15/Lesson-3-First-Application.html" rel="alternate" type="text/html" title="Lesson-3: A First Application: Classifying Iris Species" /><published>2017-09-15T12:31:56+05:30</published><updated>2017-09-15T12:31:56+05:30</updated><id>http://localhost:4000/lesson/2017/09/15/Lesson-3-First-Application</id><content type="html" xml:base="http://localhost:4000/lesson/2017/09/15/Lesson-3-First-Application.html">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
 
 &lt;p&gt;Machine learning is about extracting knowledge from data. It is a research field at the intersection of &lt;code class=&quot;highlighter-rouge&quot;&gt;statistics&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;artificial inteligence&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;computer science&lt;/code&gt;.&lt;/p&gt;
 
