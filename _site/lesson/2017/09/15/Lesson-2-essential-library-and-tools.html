@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Introduction to Machine Learning with Python</title>
-  <meta name="description" content="This is an Introduction to machine Learning using python. We will using some of the most common open source machine packages.">
+  <title>Lesson-2: Essential Libraries and Tools</title>
+  <meta name="description" content="Numpy">
 
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="http://localhost:4000/">
+  <link rel="canonical" href="http://localhost:4000/lesson/2017/09/15/Lesson-2-essential-library-and-tools.html">
   <link rel="alternate" type="application/rss+xml" title="Introduction to Machine Learning with Python" href="/feed.xml">
   
   
@@ -67,38 +67,65 @@
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="home">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <h1 class="page-heading">Posts</h1>
-  
-  
-
-
-  <ul class="post-list">
-    
-      <li>
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Lesson-2: Essential Libraries and Tools</h1>
+    <p class="post-meta">
+      <time datetime="2017-09-15T16:31:56+05:30" itemprop="datePublished">
         
-        <span class="post-meta">Sep 15, 2017</span>
+        Sep 15, 2017
+      </time>
+      </p>
+  </header>
 
-        <h2>
-          <a class="post-link" href="/lesson/2017/09/15/Lesson-2-essential-library-and-tools.html">Lesson-2: Essential Libraries and Tools</a>
-        </h2>
-      </li>
-    
-      <li>
-        
-        <span class="post-meta">Sep 15, 2017</span>
+  <div class="post-content" itemprop="articleBody">
+    <h1 id="numpy">Numpy</h1>
 
-        <h2>
-          <a class="post-link" href="/lesson/2017/09/15/Lesson-1-Introduction.html">Lesson-1: Installation</a>
-        </h2>
-      </li>
-    
-  </ul>
+<p>Numpy is one of the fundamental packages for scientific computing in python. The core functionality of NumPy is the <code class="highlighter-rouge">ndarray</code> class, a multidimensional(n-d) array. All elements of the arrays must be of the same type.</p>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+<p>Sample usage of NumPy:</p>
 
-</div>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></code></pre></figure>
+
+<p>OUTPUT:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">[[</span>1 2 3]
+ <span class="o">[</span>4 5 6]]</code></pre></figure>
+
+<h1 id="installation">Installation</h1>
+<p>System configuration we tested on is  <code class="highlighter-rouge">ubuntu 16.04</code> with <code class="highlighter-rouge">python3</code>. For easy installation of packages in python, we recommend installing <code class="highlighter-rouge">pip</code> - a package managment tool for python.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo apt-get install python3-pip</code></pre></figure>
+
+<p>we will be using <a href="http://scikit-learn.org/stable/index.html">scikitlearn</a> an open source machine learning library. Since <code class="highlighter-rouge">scikitlearn</code> has dependencies on other packages, we also need to install them.</p>
+
+<p>for <code class="highlighter-rouge">Python 2.7</code></p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">pip install numpy scipy matplotlib ipython scikit-learn pandas</code></pre></figure>
+
+<p>for <code class="highlighter-rouge">Python 3</code></p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">pip3 install numpy scipy matplotlib ipython scikit-learn pandas</code></pre></figure>
+
+<h1 id="jupyter-notebook">Jupyter Notebook</h1>
+<p>For interactive python, you can use <a href="http://jupyter.org/">jupyter</a>.</p>
+
+<p>Install Jupyter</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">pip install jupyter</code></pre></figure>
+
+<p>To start <code class="highlighter-rouge">Jupyter</code></p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">jupyter notebook</code></pre></figure>
+
+
+  </div>
+
+  
+</article>
 
       </div>
     </main>
