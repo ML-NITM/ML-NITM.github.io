@@ -1,4 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-09-15T19:00:31+05:30</updated><id>http://localhost:4000/</id><title type="html">Introduction to Machine Learning with Python</title><subtitle>This is an Introduction to machine Learning using python. We will using some of the most common open source machine packages.</subtitle><entry><title type="html">Lesson-2: Essential Libraries and Tools</title><link href="http://localhost:4000/lesson/2017/09/15/Lesson-2-essential-library-and-tools.html" rel="alternate" type="text/html" title="Lesson-2: Essential Libraries and Tools" /><published>2017-09-15T16:31:56+05:30</published><updated>2017-09-15T16:31:56+05:30</updated><id>http://localhost:4000/lesson/2017/09/15/Lesson-2-essential-library-and-tools</id><content type="html" xml:base="http://localhost:4000/lesson/2017/09/15/Lesson-2-essential-library-and-tools.html">&lt;h1 id=&quot;numpy&quot;&gt;Numpy&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-09-15T19:02:51+05:30</updated><id>http://localhost:4000/</id><title type="html">Introduction to Machine Learning with Python</title><subtitle>This is an Introduction to machine Learning using python. We will using some of the most common open source machine packages.</subtitle><entry><title type="html">Lesson-1: Installation</title><link href="http://localhost:4000/lesson/2017/09/15/Lesson-1-Introduction.html" rel="alternate" type="text/html" title="Lesson-1: Installation" /><published>2017-09-15T03:31:56+05:30</published><updated>2017-09-15T03:31:56+05:30</updated><id>http://localhost:4000/lesson/2017/09/15/Lesson-1-Introduction</id><content type="html" xml:base="http://localhost:4000/lesson/2017/09/15/Lesson-1-Introduction.html">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+
+&lt;p&gt;Machine learning is about extracting knowledge from data. It is a research field at the intersection of &lt;code class=&quot;highlighter-rouge&quot;&gt;statistics&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;artificial inteligence&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;computer science&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;installation&quot;&gt;Installation&lt;/h1&gt;
+&lt;p&gt;System configuration we tested on is  &lt;code class=&quot;highlighter-rouge&quot;&gt;ubuntu 16.04&lt;/code&gt; with &lt;code class=&quot;highlighter-rouge&quot;&gt;python3&lt;/code&gt;. For easy installation of packages in python, we recommend installing &lt;code class=&quot;highlighter-rouge&quot;&gt;pip&lt;/code&gt; - a package managment tool for python.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo apt-get install python3-pip&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;we will be using &lt;a href=&quot;http://scikit-learn.org/stable/index.html&quot;&gt;scikitlearn&lt;/a&gt; an open source machine learning library. Since &lt;code class=&quot;highlighter-rouge&quot;&gt;scikitlearn&lt;/code&gt; has dependencies on other packages, we also need to install them.&lt;/p&gt;
+
+&lt;p&gt;for &lt;code class=&quot;highlighter-rouge&quot;&gt;Python 2.7&lt;/code&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pip install numpy scipy matplotlib ipython scikit-learn pandas&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;for &lt;code class=&quot;highlighter-rouge&quot;&gt;Python 3&lt;/code&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pip3 install numpy scipy matplotlib ipython scikit-learn pandas&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h1 id=&quot;jupyter-notebook&quot;&gt;Jupyter Notebook&lt;/h1&gt;
+&lt;p&gt;For interactive python, you can use &lt;a href=&quot;http://jupyter.org/&quot;&gt;jupyter&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Install Jupyter&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pip install jupyter&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;To start &lt;code class=&quot;highlighter-rouge&quot;&gt;Jupyter&lt;/code&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;jupyter notebook&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name></name></author><summary type="html">Introduction</summary></entry><entry><title type="html">Lesson-2: Essential Libraries and Tools</title><link href="http://localhost:4000/lesson/2017/09/15/Lesson-2-essential-library-and-tools.html" rel="alternate" type="text/html" title="Lesson-2: Essential Libraries and Tools" /><published>2017-09-15T02:31:56+05:30</published><updated>2017-09-15T02:31:56+05:30</updated><id>http://localhost:4000/lesson/2017/09/15/Lesson-2-essential-library-and-tools</id><content type="html" xml:base="http://localhost:4000/lesson/2017/09/15/Lesson-2-essential-library-and-tools.html">&lt;h1 id=&quot;numpy&quot;&gt;Numpy&lt;/h1&gt;
 
 &lt;p&gt;Numpy is one of the fundamental packages for scientific computing in python. The core functionality of NumPy is the &lt;code class=&quot;highlighter-rouge&quot;&gt;ndarray&lt;/code&gt; class, a multidimensional(n-d) array. All elements of the arrays must be of the same type.&lt;/p&gt;
 
@@ -189,35 +217,7 @@
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;/div&gt;</content><author><name></name></author><summary type="html">Numpy</summary></entry><entry><title type="html">Lesson-1: Installation</title><link href="http://localhost:4000/lesson/2017/09/15/Lesson-1-Introduction.html" rel="alternate" type="text/html" title="Lesson-1: Installation" /><published>2017-09-15T16:31:56+05:30</published><updated>2017-09-15T16:31:56+05:30</updated><id>http://localhost:4000/lesson/2017/09/15/Lesson-1-Introduction</id><content type="html" xml:base="http://localhost:4000/lesson/2017/09/15/Lesson-1-Introduction.html">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
-
-&lt;p&gt;Machine learning is about extracting knowledge from data. It is a research field at the intersection of &lt;code class=&quot;highlighter-rouge&quot;&gt;statistics&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;artificial inteligence&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;computer science&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h1 id=&quot;installation&quot;&gt;Installation&lt;/h1&gt;
-&lt;p&gt;System configuration we tested on is  &lt;code class=&quot;highlighter-rouge&quot;&gt;ubuntu 16.04&lt;/code&gt; with &lt;code class=&quot;highlighter-rouge&quot;&gt;python3&lt;/code&gt;. For easy installation of packages in python, we recommend installing &lt;code class=&quot;highlighter-rouge&quot;&gt;pip&lt;/code&gt; - a package managment tool for python.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo apt-get install python3-pip&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;we will be using &lt;a href=&quot;http://scikit-learn.org/stable/index.html&quot;&gt;scikitlearn&lt;/a&gt; an open source machine learning library. Since &lt;code class=&quot;highlighter-rouge&quot;&gt;scikitlearn&lt;/code&gt; has dependencies on other packages, we also need to install them.&lt;/p&gt;
-
-&lt;p&gt;for &lt;code class=&quot;highlighter-rouge&quot;&gt;Python 2.7&lt;/code&gt;&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pip install numpy scipy matplotlib ipython scikit-learn pandas&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;for &lt;code class=&quot;highlighter-rouge&quot;&gt;Python 3&lt;/code&gt;&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pip3 install numpy scipy matplotlib ipython scikit-learn pandas&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h1 id=&quot;jupyter-notebook&quot;&gt;Jupyter Notebook&lt;/h1&gt;
-&lt;p&gt;For interactive python, you can use &lt;a href=&quot;http://jupyter.org/&quot;&gt;jupyter&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Install Jupyter&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pip install jupyter&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;To start &lt;code class=&quot;highlighter-rouge&quot;&gt;Jupyter&lt;/code&gt;&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;jupyter notebook&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name></name></author><summary type="html">Introduction</summary></entry><entry><title type="html">Lesson-3: A First Application: Classifying Iris Species</title><link href="http://localhost:4000/lesson/2017/09/15/Lesson-3-First-Application.html" rel="alternate" type="text/html" title="Lesson-3: A First Application: Classifying Iris Species" /><published>2017-09-15T12:31:56+05:30</published><updated>2017-09-15T12:31:56+05:30</updated><id>http://localhost:4000/lesson/2017/09/15/Lesson-3-First-Application</id><content type="html" xml:base="http://localhost:4000/lesson/2017/09/15/Lesson-3-First-Application.html">&lt;h1 id=&quot;classifying-iris-species&quot;&gt;Classifying Iris Species&lt;/h1&gt;
+&lt;/div&gt;</content><author><name></name></author><summary type="html">Numpy</summary></entry><entry><title type="html">Lesson-3: A First Application: Classifying Iris Species</title><link href="http://localhost:4000/lesson/2017/09/15/Lesson-3-First-Application.html" rel="alternate" type="text/html" title="Lesson-3: A First Application: Classifying Iris Species" /><published>2017-09-15T01:31:56+05:30</published><updated>2017-09-15T01:31:56+05:30</updated><id>http://localhost:4000/lesson/2017/09/15/Lesson-3-First-Application</id><content type="html" xml:base="http://localhost:4000/lesson/2017/09/15/Lesson-3-First-Application.html">&lt;h1 id=&quot;classifying-iris-species&quot;&gt;Classifying Iris Species&lt;/h1&gt;
 &lt;p&gt;The iris dataset is a classification task consisting in identifying 3 different types of irises (Setosa, Versicolour, and Virginica) from their petal and sepal length and width:&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Our goal is to build a machine learning model that can learn from the measurements of these irises whose species is known, so that we can predict the species for a new iris&lt;/code&gt;&lt;/p&gt;

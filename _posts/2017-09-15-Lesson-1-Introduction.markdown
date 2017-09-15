@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Lesson-1: Installation"
-date:   2017-09-15 16:31:56 +0530
+date:   2017-09-15 3:31:56 +0530
 categories: lesson
 ---
 # Introduction

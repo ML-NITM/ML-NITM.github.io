@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Lesson-3: A First Application: Classifying Iris Species"
-date:   2017-09-15 12:31:56 +0530
+date:   2017-09-15 1:31:56 +0530
 categories: lesson
 ---
 # Classifying Iris Species

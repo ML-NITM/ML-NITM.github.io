@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Lesson-2: Essential Libraries and Tools"
-date:   2017-09-15 16:31:56 +0530
+date:   2017-09-15 2:31:56 +0530
 categories: lesson
 ---
 # Numpy
