@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-09-15T19:04:21+05:30</updated><id>http://localhost:4000/</id><title type="html">Introduction to Machine Learning with Python</title><subtitle>This is an Introduction to machine Learning using python. We will using some of the most common open source machine packages.</subtitle><entry><title type="html">Lesson-1: Installation</title><link href="http://localhost:4000/lesson/2017/09/15/Lesson-1-Introduction.html" rel="alternate" type="text/html" title="Lesson-1: Installation" /><published>2017-09-15T03:31:56+05:30</published><updated>2017-09-15T03:31:56+05:30</updated><id>http://localhost:4000/lesson/2017/09/15/Lesson-1-Introduction</id><content type="html" xml:base="http://localhost:4000/lesson/2017/09/15/Lesson-1-Introduction.html">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-09-19T09:04:09+05:30</updated><id>http://localhost:4000/</id><title type="html">Introduction to Machine Learning with Python</title><subtitle>This is an Introduction to machine Learning using python. We will using some of the most common open source machine packages.</subtitle><entry><title type="html">Lesson-1: Installation</title><link href="http://localhost:4000/lesson/2017/09/15/Lesson-1-Introduction.html" rel="alternate" type="text/html" title="Lesson-1: Installation" /><published>2017-09-15T03:31:56+05:30</published><updated>2017-09-15T03:31:56+05:30</updated><id>http://localhost:4000/lesson/2017/09/15/Lesson-1-Introduction</id><content type="html" xml:base="http://localhost:4000/lesson/2017/09/15/Lesson-1-Introduction.html">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
 
 &lt;p&gt;Machine learning is about extracting knowledge from data. It is a research field at the intersection of &lt;code class=&quot;highlighter-rouge&quot;&gt;statistics&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;artificial inteligence&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;computer science&lt;/code&gt;.&lt;/p&gt;
 
@@ -495,4 +495,129 @@ References
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(150, 4)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><author><name></name></author><summary type="html">Classifying Iris Species The iris dataset is a classification task consisting in identifying 3 different types of irises (Setosa, Versicolour, and Virginica) from their petal and sepal length and width:</summary></entry></feed>
+&lt;/div&gt;</content><author><name></name></author><summary type="html">Classifying Iris Species The iris dataset is a classification task consisting in identifying 3 different types of irises (Setosa, Versicolour, and Virginica) from their petal and sepal length and width:</summary></entry><entry><title type="html">Lesson-4:Introduction to Machine Learning</title><link href="http://localhost:4000/lesson/2017/09/12/Lesson-4-Introduction-to-Machine-Learning.html" rel="alternate" type="text/html" title="Lesson-4:Introduction to Machine Learning" /><published>2017-09-12T01:31:56+05:30</published><updated>2017-09-12T01:31:56+05:30</updated><id>http://localhost:4000/lesson/2017/09/12/Lesson-4-Introduction%20to%20Machine%20Learning</id><content type="html" xml:base="http://localhost:4000/lesson/2017/09/12/Lesson-4-Introduction-to-Machine-Learning.html">&lt;h2 id=&quot;machine-learning-the-problem-setting&quot;&gt;Machine learning: the problem setting&lt;/h2&gt;
+&lt;p&gt;A Machine learning problem considers a set of &lt;code class=&quot;highlighter-rouge&quot;&gt;n samples&lt;/code&gt; of data and then tries to predict properties of &lt;code class=&quot;highlighter-rouge&quot;&gt;unknown data&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Key types of Machine Learning problems&lt;/p&gt;
+
+&lt;h1 id=&quot;supervised-learning&quot;&gt;Supervised Learning&lt;/h1&gt;
+
+&lt;p&gt;Learn to predict target values from labelled data&lt;/p&gt;
+
+&lt;p&gt;This problem can be either:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;classification:&lt;/code&gt;samples belong to two or more classes and we want to learn from already labeled data how to predict the class of unlabeled data. &lt;code class=&quot;highlighter-rouge&quot;&gt;Target values are discrete classes&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Regression:&lt;/code&gt; if the desired output consists of one or more continuous variables, then the task is called regression. &lt;code class=&quot;highlighter-rouge&quot;&gt;Target values are continuous values&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/supervise-example.png&quot; alt=&quot;png&quot; /&gt;
+&lt;a href=&quot;https://www.coursera.org/learn/python-machine-learning/lecture/hrHXm/key-concepts-in-machine-learning&quot;&gt;photo from coursera: applied machine learning using python&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;unsupervised-learning&quot;&gt;Unsupervised Learning&lt;/h1&gt;
+&lt;p&gt;Here the training data consists of a set of &lt;code class=&quot;highlighter-rouge&quot;&gt;input vectors&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;x&lt;/code&gt; without any corresponding &lt;code class=&quot;highlighter-rouge&quot;&gt;target&lt;/code&gt; values. The goal in such problems may be to discover groups of similar examples within the data, where it is called &lt;a href=&quot;https://en.wikipedia.org/wiki/Cluster_analysis&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;clustering&lt;/code&gt;&lt;/a&gt;. &lt;code class=&quot;highlighter-rouge&quot;&gt;Find structure in unlabeled data &lt;/code&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Find groups of similar instances in the data(clustering).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Finding unusual patterns (outlier detection)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Finding useful structure or knowledge in data when no labels are available.&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;training-set-and-testing-set&quot;&gt;Training set and testing set&lt;/h2&gt;
+&lt;p&gt;Machine learning is about learning some properties of a data set and applying them to new data. This is why a common practice in machine learning to evaluate an algorithm is to split the data at hand into two sets, one that we call the &lt;code class=&quot;highlighter-rouge&quot;&gt;training set&lt;/code&gt; on which we learn data properties and one that we call the &lt;code class=&quot;highlighter-rouge&quot;&gt;testing set&lt;/code&gt; on which we test these properties.&lt;/p&gt;
+
+&lt;h2 id=&quot;machine-learning-workflow&quot;&gt;Machine Learning Workflow&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/machinel-workflow.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;k--nearest-neighbor-classifier-algorithm&quot;&gt;K- Nearest Neighbor Classifier algorithm&lt;/h1&gt;
+
+&lt;p&gt;Given a training set &lt;code class=&quot;highlighter-rouge&quot;&gt;X_train&lt;/code&gt; with labels &lt;code class=&quot;highlighter-rouge&quot;&gt;y_train&lt;/code&gt;, and given a new instance &lt;code class=&quot;highlighter-rouge&quot;&gt;x_test&lt;/code&gt; to be classified:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Find the most similar instance ( lets call these &lt;code class=&quot;highlighter-rouge&quot;&gt;X_NN&lt;/code&gt;) to &lt;code class=&quot;highlighter-rouge&quot;&gt;X_test&lt;/code&gt; that are in &lt;code class=&quot;highlighter-rouge&quot;&gt;X_train&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Get the labels &lt;code class=&quot;highlighter-rouge&quot;&gt;y_NN&lt;/code&gt; for the instances in &lt;code class=&quot;highlighter-rouge&quot;&gt;X_NN&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Predict the label for &lt;code class=&quot;highlighter-rouge&quot;&gt;X_test&lt;/code&gt; by combining the labels &lt;code class=&quot;highlighter-rouge&quot;&gt;y_NN&lt;/code&gt; example: simple majority vote.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A Nearest Neighbor algorithm needs 4 things&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;A distance metric (typically Euclidean)&lt;/li&gt;
+  &lt;li&gt;How many &lt;code class=&quot;highlighter-rouge&quot;&gt;nearest&lt;/code&gt; neighbor to look at? i.e, &lt;code class=&quot;highlighter-rouge&quot;&gt;k&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Optional weighting function on the neighbor points&lt;/li&gt;
+  &lt;li&gt;How to aggregate the classes of the neighbor points example: simple majority vote&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;import-required-modules-and-data-file&quot;&gt;Import required modules and data file&lt;/h1&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;matplotlib&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;notebook&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;np&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;plt&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pandas&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pd&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sklearn.model_selection&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;train_test_split&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sklearn.datasets&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;load_iris&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;load-data-file&quot;&gt;Load data file&lt;/h1&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;iris&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;load_iris&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;create-train-test-split&quot;&gt;Create Train-Test Split&lt;/h1&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;iris_X&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;iris&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;iris_y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;iris&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;seed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;indices&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;permutation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;iris_X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;iris_X_train&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;iris_X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;indices&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;iris_y_train&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;iris_y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;indices&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;iris_X_test&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;iris_X&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;indices&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:]]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;iris_y_test&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;iris_y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;indices&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:]]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;create-and-fit-a-nearest-neighbor-classifier&quot;&gt;Create and fit a nearest-neighbor classifier&lt;/h1&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;knn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;KNeighborsClassifier&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;knn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;iris_X_train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;iris_y_train&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;KNeighborsClassifier(algorithm='auto', leaf_size=30, metric='minkowski',
+           metric_params=None, n_jobs=1, n_neighbors=5, p=2,
+           weights='uniform')
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;make-prediction&quot;&gt;Make prediction&lt;/h1&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;knn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;predict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;iris_X_test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;array([1, 2, 1, 0, 0, 0, 2, 1, 2, 0])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;calculate-the-score&quot;&gt;Calculate the score&lt;/h1&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;knn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;score&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;iris_X_test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;iris_y_test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;0.90000000000000002
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;http://scikit-learn.org/stable/tutorial/basic/tutorial.html#machine-learning-the-problem-setting&quot;&gt;http://scikit-learn.org/stable/tutorial/basic/tutorial.html#machine-learning-the-problem-setting&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Machine learning: the problem setting A Machine learning problem considers a set of n samples of data and then tries to predict properties of unknown data.</summary></entry></feed>
