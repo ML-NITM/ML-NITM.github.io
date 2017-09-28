@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Lesson-4:Introduction to Machine Learning"
-date:   2017-09-12 1:31:56 +0530
+title:  "Lesson-1:Introduction to Machine Learning"
+date:   2017-09-20 1:31:56 +0530
 categories: lesson
 ---
 ## Machine learning: the problem setting
