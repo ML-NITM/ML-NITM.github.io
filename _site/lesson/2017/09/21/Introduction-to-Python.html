@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Introduction to Python Programming</title>
+  <meta name="description" content="Numbers, Strings, and Lists">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/lesson/2017/09/21/Introduction-to-Python.html">
+  <link rel="alternate" type="application/rss+xml" title="Introduction to Machine Learning with Python" href="/feed.xml">
+  
+  
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    <a class="site-title" href="/">Introduction to Machine Learning with Python</a>
+  
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          
+            
+            
+          
+            
+            
+            <a class="page-link" href="/books/">Books</a>
+            
+          
+            
+            
+          
+            
+            
+            <a class="page-link" href="/resources/">Resources</a>
+            
+          
+            
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Introduction to Python Programming</h1>
+    <p class="post-meta">
+      <time datetime="2017-09-21T01:31:56+05:30" itemprop="datePublished">
+        
+        Sep 21, 2017
+      </time>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <h1 id="numbers-strings-and-lists">Numbers, Strings, and Lists</h1>
+
+<p>Python supports a number of built-in types and operations. For more information  <a href="https://docs.python.org/3/library/stdtypes.html">click here</a>.</p>
+
+<h2 id="basic-numeric-types">Basic numeric types</h2>
+
+<p><strong>Integers (<code class="highlighter-rouge">int</code>)</strong></p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">j</span> <span class="o">=</span> <span class="mi">219089</span>
+<span class="n">k</span> <span class="o">=</span> <span class="o">-</span><span class="mi">21231</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>Note that this is a point where python2 and python3 differ:  python2 will
+output
+    (1, 219089, -21231)
+here, python3
+    1 219089 -21231
+In the jargon: python3 has made print a function, where it’s been a statement in python2.</p>
+
+<p>-&gt; Here the brackets had a different meaning in python2.</p>
+
+<p><strong>Floating point values (<code class="highlighter-rouge">float</code>)</strong></p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="mf">4.3</span>
+<span class="n">b</span> <span class="o">=</span> <span class="o">-</span><span class="mf">5.2111222</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mf">3.1e33</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>4.3 -5.2111222 3.1e+33
+</code></pre>
+</div>
+
+<p>Manipulating these behaves the way you would expect, so an operation (<code class="highlighter-rouge">+</code>, <code class="highlighter-rouge">-</code>, <code class="highlighter-rouge">*</code>, <code class="highlighter-rouge">**</code>, etc.) on two values of the same type produces another value of the same type (with one, exception, <code class="highlighter-rouge">/</code>, see below), while an operation on two values with different types produces a value of the more ‘advanced’ type:</p>
+
+<p>Adding two integers gives an integer:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="mi">1</span> <span class="o">+</span> <span class="mi">3</span>
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>4
+</code></pre>
+</div>
+
+<p>Multiplying two floats gives a float:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="mf">3.</span> <span class="o">*</span> <span class="mf">2.</span>
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>6.0
+</code></pre>
+</div>
+
+<p>Multiplying an integer with a float gives a float:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="mi">3</span> <span class="o">*</span> <span class="mf">9.2</span>
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>27.599999999999998
+</code></pre>
+</div>
+
+<p>However, the division of two integers gives a float:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="mi">3</span> <span class="o">/</span> <span class="mi">2</span>
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>1.5
+</code></pre>
+</div>
+
+<p>Note that in Python 2.x, this used to return <code class="highlighter-rouge">1</code> because it would round the solution to an integer. If you ever need to work with Python 2 code, the safest approach is to add the following line at the top of the script:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>from __future__ import division
+</code></pre>
+</div>
+
+<p>and the division will then behave like a Python 3 division. Note that in Python 3 you can also specifically request integer division:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="mi">3</span> <span class="o">//</span> <span class="mi">2</span>
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>1
+</code></pre>
+</div>
+
+<h2 id="strings">Strings</h2>
+
+<p>Strings (<code class="highlighter-rouge">str</code>) are sequences of characters:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">s</span> <span class="o">=</span> <span class="s">"Spam egg spam spam"</span>
+</code></pre>
+</div>
+
+<p>You can use either single quotes (<code class="highlighter-rouge">'</code>), double quotes (<code class="highlighter-rouge">"</code>), or triple quotes (<code class="highlighter-rouge">'''</code> or <code class="highlighter-rouge">"""</code>) to enclose a string (the last one is used for multi-line strings). To include single or double quotes inside a string, you can either use the opposite quote to enclose the string:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="s">"I'm"</span>
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>"I'm"
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="s">'"hello"'</span>
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>'"hello"'
+</code></pre>
+</div>
+
+<p>or you can <em>escape</em> them:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="s">'I</span><span class="se">\'</span><span class="s">m'</span>
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>"I'm"
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="s">"</span><span class="se">\"</span><span class="s">hello</span><span class="se">\"</span><span class="s">"</span>
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>'"hello"'
+</code></pre>
+</div>
+
+<p>You can access individual characters or chunks of characters using the item notation with square brackets<code class="highlighter-rouge">[]</code>:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">s</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>'e'
+</code></pre>
+</div>
+
+<p>Note that in Python, indexing is <em>zero-based</em>, which means that the first element in a list is zero:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>'S'
+</code></pre>
+</div>
+
+<p>Note that strings are <strong>immutable</strong>, that is you cannot change the value of certain characters without creating a new string:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">s</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="s">'r'</span>
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>---------------------------------------------------------------------------
+
+TypeError                                 Traceback (most recent call last)
+
+&lt;ipython-input-21-e268c53f8105&gt; in &lt;module&gt;()
+----&gt; 1 s[5] = 'r'
+
+
+TypeError: 'str' object does not support item assignment
+</code></pre>
+</div>
+
+<p>You can easily find the length of a string:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>18
+</code></pre>
+</div>
+
+<p>You can use the <code class="highlighter-rouge">+</code> operator to combine strings:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="s">"hello,"</span> <span class="o">+</span> <span class="s">" "</span> <span class="o">+</span> <span class="s">"world!"</span>
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>'hello, world!'
+</code></pre>
+</div>
+
+<p>Finally, strings have many <strong>methods</strong> associated with them, here are a few examples:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">s</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>  <span class="c"># An uppercase version of the string</span>
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>'SPAM EGG SPAM SPAM'
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">s</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s">'egg'</span><span class="p">)</span>  <span class="c"># An integer giving the position of the sub-string</span>
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>5
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">s</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>  <span class="c"># A list of strings</span>
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>['Spam', 'egg', 'spam', 'spam']
+</code></pre>
+</div>
+
+<h2 id="lists">Lists</h2>
+
+<p>There are several kinds of ways of storing sequences in Python, the simplest being the <code class="highlighter-rouge">list</code>, which is simply a sequence of <em>any</em> Python object.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">li</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mf">5.5</span><span class="p">,</span> <span class="s">"spam"</span><span class="p">]</span>
+</code></pre>
+</div>
+
+<p>Accessing individual items is done like for strings</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">li</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>4
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">li</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>5.5
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">li</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>'spam'
+</code></pre>
+</div>
+
+<p>Values in a list can be changed, and it is also possible to append or insert elements:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">li</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mf">2.2</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">li</span>
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>[4, -2.2, 'spam']
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">li</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">li</span>
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>[4, -2.2, 'spam', -3]
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">li</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">3.14</span><span class="p">)</span> <span class="c"># insert at position 1</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">li</span>
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>[4, 3.14, -2.2, 'spam', -3]
+</code></pre>
+</div>
+
+<p>As for strings, you can find the length of a list (the number of elements) with the <code class="highlighter-rouge">len</code> function:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="nb">len</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>5
+</code></pre>
+</div>
+
+<h2 id="slicing">Slicing</h2>
+
+<p>We already mentioned above that it is possible to access individual elements from a string or a list using the square bracket notation. You will also find this notation for other object types in Python, for example tuples or Numpy arrays, so it’s worth spending a bit of time looking at this in more detail.</p>
+
+<p>In addition to using positive integers, where <code class="highlighter-rouge">0</code> is the first item, it is possible to access list items with <em>negative</em> indices, which counts from the end: <code class="highlighter-rouge">-1</code> is the last element, <code class="highlighter-rouge">-2</code> is the second to last, etc:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">li</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">li</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>6
+</code></pre>
+</div>
+
+<p>You can also select <strong>slices</strong> from a list with the <code class="highlighter-rouge">start:end:step</code> syntax. Be aware that the last element is <em>not</em> included!</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">li</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>[4, 67]
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">li</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>  <span class="c"># ``start`` defaults to zero</span>
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>[4, 67]
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">li</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>  <span class="c"># ``end`` defaults to the last element </span>
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>[4, 2, 4, 6]
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">li</span><span class="p">[::</span><span class="mi">2</span><span class="p">]</span>  <span class="c"># specify a step size</span>
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>[4, 4, 4]
+</code></pre>
+</div>
+
+<h2 id="exercise-2">Exercise 2</h2>
+
+<p>Given a string such as the one below, make a new string that does not contain the word <code class="highlighter-rouge">egg</code>:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="s">"Hello, egg world!"</span>
+
+<span class="c"># enter your solution here</span>
+
+</code></pre>
+</div>
+
+<p>Try changing the string above to see if your solution works (you can assume that <code class="highlighter-rouge">egg</code> appears only once in the string).</p>
+
+<h2 id="a-note-on-python-objects-demo">A note on Python objects (demo)</h2>
+
+<p>Most things in Python are objects.  But what is an object?</p>
+
+<p>Every constant, variable, or function in Python is actually a object with a
+type and associated attributes and methods. An <em>attribute</em> a property of the
+object that you get or set by giving the <code class="highlighter-rouge">&lt;object_name&gt;.&lt;attribute_name&gt;</code>, for example <code class="highlighter-rouge">img.shape</code>. A <em>method</em> is a function that the object provides, for example <code class="highlighter-rouge">img.argmax(axis=0)</code> or <code class="highlighter-rouge">img.min()</code>.</p>
+
+<p>Use tab completion in IPython to inspect objects and start to understand
+attributes and methods. To start off create a list of 4 numbers:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>li = [3, 1, 2, 1]
+li.&lt;TAB&gt;
+</code></pre>
+</div>
+
+<p>This will show the available attributes and methods for the Python list
+<code class="highlighter-rouge">li</code>.</p>
+
+<p><strong>Using <code class="highlighter-rouge">&lt;TAB&gt;</code>-completion and help is a very efficient way to learn and later
+remember object methods!</strong></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>In [2]: li.
+li.append   li.copy     li.extend   li.insert   li.remove   li.sort
+li.clear    li.count    li.index    li.pop      li.reverse 
+</code></pre>
+</div>
+
+<p>If you want to know what a function or method does, you can use a question mark <code class="highlighter-rouge">?</code>:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>In [9]: li.append?
+Type:       builtin_function_or_method
+String Form:&lt;built-in method append of list object at 0x1027210e0&gt;
+Docstring:  L.append(object) -&gt; None -- append object to end
+</code></pre>
+</div>
+
+<h2 id="dynamic-typing">Dynamic typing</h2>
+
+<p>One final note on Python types: if you know languages like C, Java or, say, Pascal, you will remember you had to declare variables.  Essentially, types are bound to names in such “statically typed” languages.  In Python, on the other hand, types sit on the values, and names just point there; there’s nothing that keeps you from having a single name point to differently typed values (except perhaps common sense in may cases).  Jargon calls this <em>dynamic typing</em>.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>int
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="mf">2.3</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>float
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="s">'hello'</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>str
+</code></pre>
+</div>
+
+<h2 id="converting-between-types">Converting between types</h2>
+
+<p>There may be cases where you want to convert a string to a floating point value, and integer to a string, etc. For this, you can simply use the <code class="highlighter-rouge">int()</code>, <code class="highlighter-rouge">float()</code>, and <code class="highlighter-rouge">str()</code> functions:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="nb">int</span><span class="p">(</span><span class="s">'1'</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>1
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="nb">float</span><span class="p">(</span><span class="s">'4.31'</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>4.31
+</code></pre>
+</div>
+
+<p>For example:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="nb">int</span><span class="p">(</span><span class="s">'5'</span><span class="p">)</span> <span class="o">+</span> <span class="nb">float</span><span class="p">(</span><span class="s">'4.31'</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>9.309999999999999
+</code></pre>
+</div>
+
+<p>is different from:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="s">'5'</span> <span class="o">+</span> <span class="s">'4.31'</span>
+</code></pre>
+</div>
+
+<p>Similarly:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="nb">str</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="nb">str</span><span class="p">(</span><span class="mf">4.5521</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="nb">str</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>Be aware of this for example when connecting strings with numbers, as you can only concatenate identical types this way:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="s">'The value is '</span> <span class="o">+</span> <span class="mi">3</span>
+</code></pre>
+</div>
+
+<p>Instead do:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="s">'The value is '</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<h1 id="booleans-tuples-and-dictionaries">Booleans, Tuples, and Dictionaries</h1>
+
+<h2 id="booleans">Booleans</h2>
+
+<p>A <code class="highlighter-rouge">boolean</code> is one of the simplest Python types, and it can have two values: <code class="highlighter-rouge">True</code> and <code class="highlighter-rouge">False</code> (with uppercase <code class="highlighter-rouge">T</code> and <code class="highlighter-rouge">F</code>):</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">b</span> <span class="o">=</span> <span class="bp">False</span>
+</code></pre>
+</div>
+
+<p>Booleans can be combined with logical operators to give other booleans:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="bp">True</span> <span class="ow">and</span> <span class="bp">False</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="bp">True</span> <span class="ow">or</span> <span class="bp">False</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="p">(</span><span class="bp">False</span> <span class="ow">and</span> <span class="p">(</span><span class="bp">True</span> <span class="ow">or</span> <span class="bp">False</span><span class="p">))</span> <span class="ow">or</span> <span class="p">(</span><span class="bp">False</span> <span class="ow">and</span> <span class="bp">True</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>Standard comparison operators can also produce booleans:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="mi">1</span> <span class="o">==</span> <span class="mi">3</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="mi">1</span> <span class="o">!=</span> <span class="mi">3</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">2</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="mi">3</span> <span class="o">&lt;=</span> <span class="mf">3.4</span>
+</code></pre>
+</div>
+
+<h2 id="exercise-1">Exercise 1</h2>
+
+<p>Write an expression that returns <code class="highlighter-rouge">True</code> if <code class="highlighter-rouge">x</code> is strictly greater than 3.4 and smaller or equal to 6.6, or if it is 2, and try changing <code class="highlighter-rouge">x</code> to see if it works:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="mf">3.7</span>
+
+<span class="c"># your solution here</span>
+
+</code></pre>
+</div>
+
+<h2 id="tuples">Tuples</h2>
+
+<p>Tuples are, like lists, a type of sequence, but they use round parentheses rather than square brackets:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>They can contain heterogeneous types like lists:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">2.3</span><span class="p">,</span> <span class="s">'spam'</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>and also support item access and slicing like lists:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">t</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
+</code></pre>
+</div>
+
+<p>The main difference is that they are <strong>immutable</strong>, like strings:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
+</code></pre>
+</div>
+
+<h2 id="dictionaries">Dictionaries</h2>
+
+<p>One of the data types that we have not talked about yet is called <em>dictionaries</em> (<code class="highlighter-rouge">dict</code>). If you think about what a ‘real’ dictionary is, it is a list of words, and for each word is a definition. Similarly, in Python, we can assign definitions (or ‘values’), to words (or ‘keywords’).</p>
+
+<p>Dictionaries are defined using curly brackets <code class="highlighter-rouge"><span class="p">{}</span></code>:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s">'a'</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s">'b'</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="s">'c'</span><span class="p">:</span><span class="mi">3</span><span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Items are accessed using square brackets and the ‘key’:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">d</span><span class="p">[</span><span class="s">'a'</span><span class="p">]</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">d</span><span class="p">[</span><span class="s">'c'</span><span class="p">]</span>
+</code></pre>
+</div>
+
+<p>Values can also be set this way:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">d</span><span class="p">[</span><span class="s">'r'</span><span class="p">]</span> <span class="o">=</span> <span class="mf">2.2</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>The keywords don’t have to be strings, they can be many (but not all) Python objects:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">e</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">e</span><span class="p">[</span><span class="s">'a_string'</span><span class="p">]</span> <span class="o">=</span> <span class="mf">3.3</span>
+<span class="n">e</span><span class="p">[</span><span class="mi">3445</span><span class="p">]</span> <span class="o">=</span> <span class="mf">2.2</span>
+<span class="n">e</span><span class="p">[</span><span class="nb">complex</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)]</span> <span class="o">=</span> <span class="s">'value'</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">e</span><span class="p">[</span><span class="mi">3445</span><span class="p">]</span>
+</code></pre>
+</div>
+
+<p>If you try and access an element that does not exist, you will get a <code class="highlighter-rouge">KeyError</code>:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">e</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+</code></pre>
+</div>
+
+<p>Also, note that dictionaries do <em>not</em> know about order, so there is no ‘first’ or ‘last’ element.</p>
+
+<p>It is easy to check if a specific key is in a dictionary, using the <code class="highlighter-rouge">in</code> operator:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="s">"a"</span> <span class="ow">in</span> <span class="n">d</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="s">"t"</span> <span class="ow">in</span> <span class="n">d</span>
+</code></pre>
+</div>
+
+<p>Note that this also works for lists:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="mi">3</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>True
+</code></pre>
+</div>
+
+<h1 id="booleans-tuples-and-dictionaries-1">Booleans, Tuples, and Dictionaries</h1>
+
+<h2 id="booleans-1">Booleans</h2>
+
+<p>A <code class="highlighter-rouge">boolean</code> is one of the simplest Python types, and it can have two values: <code class="highlighter-rouge">True</code> and <code class="highlighter-rouge">False</code> (with uppercase <code class="highlighter-rouge">T</code> and <code class="highlighter-rouge">F</code>):</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">b</span> <span class="o">=</span> <span class="bp">False</span>
+</code></pre>
+</div>
+
+<p>Booleans can be combined with logical operators to give other booleans:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="bp">True</span> <span class="ow">and</span> <span class="bp">False</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="bp">True</span> <span class="ow">or</span> <span class="bp">False</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="p">(</span><span class="bp">False</span> <span class="ow">and</span> <span class="p">(</span><span class="bp">True</span> <span class="ow">or</span> <span class="bp">False</span><span class="p">))</span> <span class="ow">or</span> <span class="p">(</span><span class="bp">False</span> <span class="ow">and</span> <span class="bp">True</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>Standard comparison operators can also produce booleans:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="mi">1</span> <span class="o">==</span> <span class="mi">3</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="mi">1</span> <span class="o">!=</span> <span class="mi">3</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">2</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="mi">3</span> <span class="o">&lt;=</span> <span class="mf">3.4</span>
+</code></pre>
+</div>
+
+<h2 id="exercise-1-1">Exercise 1</h2>
+
+<p>Write an expression that returns <code class="highlighter-rouge">True</code> if <code class="highlighter-rouge">x</code> is strictly greater than 3.4 and smaller or equal to 6.6, or if it is 2, and try changing <code class="highlighter-rouge">x</code> to see if it works:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="mf">3.7</span>
+
+<span class="c"># your solution here</span>
+
+</code></pre>
+</div>
+
+<h2 id="tuples-1">Tuples</h2>
+
+<p>Tuples are, like lists, a type of sequence, but they use round parentheses rather than square brackets:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>They can contain heterogeneous types like lists:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">2.3</span><span class="p">,</span> <span class="s">'spam'</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>and also support item access and slicing like lists:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">t</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
+</code></pre>
+</div>
+
+<p>The main difference is that they are <strong>immutable</strong>, like strings:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
+</code></pre>
+</div>
+
+<h2 id="dictionaries-1">Dictionaries</h2>
+
+<p>One of the data types that we have not talked about yet is called <em>dictionaries</em> (<code class="highlighter-rouge">dict</code>). If you think about what a ‘real’ dictionary is, it is a list of words, and for each word is a definition. Similarly, in Python, we can assign definitions (or ‘values’), to words (or ‘keywords’).</p>
+
+<p>Dictionaries are defined using curly brackets <code class="highlighter-rouge"><span class="p">{}</span></code>:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s">'a'</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s">'b'</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="s">'c'</span><span class="p">:</span><span class="mi">3</span><span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Items are accessed using square brackets and the ‘key’:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">d</span><span class="p">[</span><span class="s">'a'</span><span class="p">]</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">d</span><span class="p">[</span><span class="s">'c'</span><span class="p">]</span>
+</code></pre>
+</div>
+
+<p>Values can also be set this way:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">d</span><span class="p">[</span><span class="s">'r'</span><span class="p">]</span> <span class="o">=</span> <span class="mf">2.2</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>The keywords don’t have to be strings, they can be many (but not all) Python objects:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">e</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">e</span><span class="p">[</span><span class="s">'a_string'</span><span class="p">]</span> <span class="o">=</span> <span class="mf">3.3</span>
+<span class="n">e</span><span class="p">[</span><span class="mi">3445</span><span class="p">]</span> <span class="o">=</span> <span class="mf">2.2</span>
+<span class="n">e</span><span class="p">[</span><span class="nb">complex</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)]</span> <span class="o">=</span> <span class="s">'value'</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">e</span><span class="p">[</span><span class="mi">3445</span><span class="p">]</span>
+</code></pre>
+</div>
+
+<p>If you try and access an element that does not exist, you will get a <code class="highlighter-rouge">KeyError</code>:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">e</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+</code></pre>
+</div>
+
+<p>Also, note that dictionaries do <em>not</em> know about order, so there is no ‘first’ or ‘last’ element.</p>
+
+<p>It is easy to check if a specific key is in a dictionary, using the <code class="highlighter-rouge">in</code> operator:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="s">"a"</span> <span class="ow">in</span> <span class="n">d</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="s">"t"</span> <span class="ow">in</span> <span class="n">d</span>
+</code></pre>
+</div>
+
+<p>Note that this also works for lists:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="mi">3</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>True
+</code></pre>
+</div>
+
+<h1 id="control-flow">Control Flow</h1>
+
+<h2 id="if-statements"><code class="highlighter-rouge">if</code> statements</h2>
+
+<p>The simplest form of control flow is the <code class="highlighter-rouge">if</code> statement, which executes a block of code only if a certain condition is true (and optionally executes code if it is <em>not</em> true. The basic syntax for an if-statement is the following:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>if condition:
+    # do something
+elif condition:
+    # do something else
+else:
+    # do yet something else
+</code></pre>
+</div>
+
+<p>Notice that there is no statement to end the if statement, and the
+presence of a colon (<code class="highlighter-rouge">:</code>) after each control flow statement. Python relies
+on <strong>indentation and colons</strong> to determine whether it is in a specific block of
+code.</p>
+
+<p>For example, in the following code:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"a is 1, changing to 2"</span><span class="p">)</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"finished"</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>The first print statement, and the <code class="highlighter-rouge">a = 2</code> statement only get executed if
+<code class="highlighter-rouge">a</code> is 1. On the other hand, <code class="highlighter-rouge">print "finished"</code> gets executed regardless,
+once Python exits the if statement.</p>
+
+<p><strong>Indentation is very important in Python, and the convention is to use four spaces (not tabs) for each level of indent.</strong></p>
+
+<p>Back to the if-statements, the conditions in the statements can be anything that returns a boolean value. For example, <code class="highlighter-rouge">a == 1</code>, <code class="highlighter-rouge">b != 4</code>, and <code class="highlighter-rouge">c &lt;= 5</code> are valid conditions because they return either <code class="highlighter-rouge">True</code> or <code class="highlighter-rouge">False</code> depending on whether the statements are true or not.</p>
+
+<p>Standard comparisons can be used (<code class="highlighter-rouge">==</code> for equal, <code class="highlighter-rouge">!=</code> for not equal, <code class="highlighter-rouge">&lt;=</code> for less or equal, <code class="highlighter-rouge">&gt;=</code> for greater or equal, <code class="highlighter-rouge">&lt;</code> for less than, and <code class="highlighter-rouge">&gt;</code> for greater than), as well as logical operators (<code class="highlighter-rouge">and</code>, <code class="highlighter-rouge">or</code>, <code class="highlighter-rouge">not</code>). Parentheses can be used to isolate different parts of conditions, to make clear in what order the comparisons should be executed, for example:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>if (a == 1 and b &lt;= 3) or c &gt; 3:
+    # do something
+</code></pre>
+</div>
+
+<p>More generally, any function or expression that ultimately returns <code class="highlighter-rouge">True</code> or <code class="highlighter-rouge">False</code> can be used.</p>
+
+<p>In particular, you can use booleans themselves:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="n">cond</span> <span class="o">=</span> <span class="n">a</span><span class="o">==</span><span class="mi">1</span> <span class="ow">or</span> <span class="n">a</span><span class="o">&gt;</span><span class="mi">7</span>
+<span class="k">if</span> <span class="n">cond</span><span class="p">:</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s">"hit"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s">"miss"</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<h2 id="for-loops"><code class="highlighter-rouge">for</code> loops</h2>
+
+<p>Another common structure that is important for controling the flow of execution are loops. Loops can be used to execute a block of code multiple times. The most common type of loop is the <code class="highlighter-rouge">for</code> loop. In its most basic form, it
+is straightforward:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>for value in iterable:
+    # do things
+</code></pre>
+</div>
+
+<p>The <code class="highlighter-rouge">iterable</code> can be any Python object that can be iterated over. This
+includes lists or strings.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">,</span> <span class="s">'a'</span><span class="p">]:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="s">'hello'</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>A common type of for loop is one where the value should go between two integers with a specific set size. To do this, we can use the <code class="highlighter-rouge">range</code> function. If given a single value, it will allow you to iterate from 0 to the value minus 1:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">12</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>  <span class="c"># the third entry specifies the "step size"</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>If you try iterating over a dictionary, it will iterate over the <strong>keys</strong> (not the values), in no specific order:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s">'a'</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s">'b'</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="s">'c'</span><span class="p">:</span><span class="mi">3</span><span class="p">}</span>
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>But you can easily get the value with:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">d</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+</code></pre>
+</div>
+
+<h2 id="building-programs">Building programs</h2>
+
+<p>These different control flow structures can be combined to form programs. For example, the following program will print out a different message depending on whether the current number in the loop is less, equal to, or greater than 10:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">22</span><span class="p">]:</span>
+    <span class="k">if</span> <span class="n">value</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Value is greater than 10 ("</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="o">+</span> <span class="s">")"</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">value</span> <span class="o">==</span> <span class="mi">10</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Value is exactly 10"</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Value is less than 10 ("</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="o">+</span> <span class="s">")"</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<h2 id="exiting-or-continuing-a-loop">Exiting or continuing a loop</h2>
+
+<p>There are two useful statements that can be called in a loop - <code class="highlighter-rouge">break</code> and <code class="highlighter-rouge">continue</code>. When called, <code class="highlighter-rouge">break</code> will exit the loop it is currently in:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="k">break</span>
+</code></pre>
+</div>
+
+<p>The other is <code class="highlighter-rouge">continue</code>, which will ignore the rest of the loop and go straight to the next iteration:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">or</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">8</span><span class="p">:</span>
+        <span class="k">continue</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<h2 id="while-loops"><code class="highlighter-rouge">while</code> loops</h2>
+
+<p>Similarly to other programming languages, Python also provides a <code class="highlighter-rouge">while</code> loop which is similar to a <code class="highlighter-rouge">for</code> loop, but where the number of iterations is defined by a condition rather than an iterator:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>while condition:
+    # do something
+</code></pre>
+</div>
+
+<p>For example, in the following example:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="mf">1.5</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Once the while loop has completed, a has the value"</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>the loop is executed until <code class="highlighter-rouge">a</code> is equal to or exceeds 10.</p>
+
+<h1 id="functions">Functions</h1>
+
+<h2 id="syntax">Syntax</h2>
+
+<p>The syntax for a <strong>function</strong> is:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>def function_name(arguments):
+    # code here
+    return values
+</code></pre>
+</div>
+
+<p>Functions are the <strong>building blocks</strong> of programs - think of them as basic units that are given a certain input an accomplish a certain task. Over time, you can build up more complex programs while preserving readability.</p>
+
+<p>Similarly to <code class="highlighter-rouge">if</code> statements and <code class="highlighter-rouge">for</code> and <code class="highlighter-rouge">while</code> loops, indentation is very important because it shows where the function starts and ends.</p>
+
+<p><strong>Note</strong>: it is a common convention to always use lowercase names for functions.</p>
+
+<p>A function can take multiple arguments…</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">add</span><span class="p">(</span><span class="mf">1.</span><span class="p">,</span><span class="mf">3.2</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">add</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mf">3.</span><span class="p">))</span>
+</code></pre>
+</div>
+
+<p>… and can also return multiple values:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nf">double_and_halve</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">value</span> <span class="o">*</span> <span class="mf">2.</span><span class="p">,</span> <span class="n">value</span> <span class="o">/</span> <span class="mf">2.</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">double_and_halve</span><span class="p">(</span><span class="mf">5.</span><span class="p">))</span>
+</code></pre>
+</div>
+
+<p>If multiple values are returned, you can store them in separate variables.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">d</span><span class="p">,</span> <span class="n">h</span> <span class="o">=</span> <span class="n">double_and_halve</span><span class="p">(</span><span class="mf">5.</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">h</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>Functions can call other functions:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nf">do_a</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"doing A"</span><span class="p">)</span>
+    
+<span class="k">def</span> <span class="nf">do_b</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"doing B"</span><span class="p">)</span>
+    
+<span class="k">def</span> <span class="nf">do_a_and_b</span><span class="p">():</span>
+    <span class="n">do_a</span><span class="p">()</span>
+    <span class="n">do_b</span><span class="p">()</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">do_a_and_b</span><span class="p">()</span>
+</code></pre>
+</div>
+
+<p><strong>Figuring out the right functions is half the trick behind a good program</strong>. A good function has a clear purpose that can, ideally, be described in one sentence of natural language.</p>
+
+<p>Beginners typically err on the side of defining too few functions and writing monsters spanning a couple of screen pages.  That’s a clear indication that you’re doing it wrong.  A good function can be taken in (albeit perhaps not understood) at a clance.</p>
+
+<h2 id="optional-arguments">Optional Arguments</h2>
+
+<p>In addition to normal arguments, functions can take <strong>optional</strong> arguments that can default to a certain value. For example, in the following case:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nf">say_hello</span><span class="p">(</span><span class="n">first_name</span><span class="p">,</span> <span class="n">middle_name</span><span class="o">=</span><span class="s">''</span><span class="p">,</span> <span class="n">last_name</span><span class="o">=</span><span class="s">''</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"First name: "</span> <span class="o">+</span> <span class="n">first_name</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">middle_name</span> <span class="o">!=</span> <span class="s">''</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Middle name: "</span> <span class="o">+</span> <span class="n">middle_name</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">last_name</span> <span class="o">!=</span> <span class="s">''</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Last name: "</span> <span class="o">+</span> <span class="n">last_name</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>we can call the function either with one argument:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">say_hello</span><span class="p">(</span><span class="s">"Michael"</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>and we can also give one or both optional arguments (and the optional arguments can be given in any order):</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">say_hello</span><span class="p">(</span><span class="s">"Michael"</span><span class="p">,</span> <span class="n">last_name</span><span class="o">=</span><span class="s">"Palin"</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">say_hello</span><span class="p">(</span><span class="s">"Michael"</span><span class="p">,</span> <span class="n">middle_name</span><span class="o">=</span><span class="s">"Edward"</span><span class="p">,</span> <span class="n">last_name</span><span class="o">=</span><span class="s">"Palin"</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">say_hello</span><span class="p">(</span><span class="s">"Michael"</span><span class="p">,</span> <span class="n">last_name</span><span class="o">=</span><span class="s">"Palin"</span><span class="p">,</span> <span class="n">middle_name</span><span class="o">=</span><span class="s">"Edward"</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<h2 id="built-in-functions">Built-in functions</h2>
+
+<p>Some of you may have already noticed that there are a few functions that are defined by default in Python:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="nb">sum</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="nb">int</span><span class="p">(</span><span class="mf">1.2</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>A <a href="http://docs.python.org/3/library/functions.html">full list of built-in functions</a> is available from http://docs.python.org. Note that there are not <em>that</em> many - these are only the most common functions. Most functions are in fact kept inside <strong>modules</strong>, which we will cover later.</p>
+
+  </div>
+
+  
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Introduction to Machine Learning with Python</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Introduction to Machine Learning with Python
+            
+            </li>
+            
+            <li><a href="mailto:ml.nitmeg@gmail.com">ml.nitmeg@gmail.com</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/ml.nitmeg@gmail.com"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">ml.nitmeg@gmail.com</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/jekyllrb"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">jekyllrb</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>This is an Introduction to machine Learning using python. We will using some of the most common open source machine packages.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
