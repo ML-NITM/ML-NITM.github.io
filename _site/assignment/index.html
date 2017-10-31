@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Introduction to ML with Python</title>
+  <title>Assignments</title>
   <meta name="description" content="This is an Introduction to machine Learning using python. We will using some of the most common open source machine packages.">
 
   <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="http://localhost:4000/404.html">
+  <link rel="canonical" href="http://localhost:4000/assignment/">
   <link rel="alternate" type="application/rss+xml" title="Introduction to ML with Python" href="/feed.xml">
   
   
@@ -77,26 +77,56 @@
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
+        <article class="post">
 
-<div class="container">
-  <h1>404</h1>
+  <header class="post-header">
+    <h1 class="post-title">Assignments</h1>
+  </header>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+  <div class="post-content">
+    <h2 id="assignment---1">Assignment - 1</h2>
+<p>31-09-2017 ( Tuesday)</p>
+
+<h3 id="this-assignment-is-to-get-familiar-with-basic-machine-learning-workflow">This assignment is to get familiar with Basic Machine Learning Workflow</h3>
+
+<p>The task are as follows:-</p>
+<ul>
+  <li>Download numerical dataset (dataset will all <code class="highlighter-rouge">attributes</code> or <code class="highlighter-rouge">features</code> in numerical representation) from <a href="http://archive.ics.uci.edu/ml/index.php">UCI Machine Learning Repository</a> also make sure the dataset is in <code class="highlighter-rouge">classification</code> category.</li>
+  <li>Study the <code class="highlighter-rouge">dataset</code> and identify <code class="highlighter-rouge">features</code> and <code class="highlighter-rouge">classes</code>.</li>
+  <li>Load the dataset using either <code class="highlighter-rouge">numpy</code> or <code class="highlighter-rouge">pandas</code> (Tips is given below)</li>
+  <li>Split the dataset into <code class="highlighter-rouge">train(75%)</code> and <code class="highlighter-rouge">test(25%)</code>, do some experiment by varying the <code class="highlighter-rouge">train(x%)</code> and the <code class="highlighter-rouge">test(%y)</code></li>
+  <li>Build a <code class="highlighter-rouge">classifier</code> using <code class="highlighter-rouge">sklearn</code> library, you may use <code class="highlighter-rouge">KNNClassifier</code> and <code class="highlighter-rouge">try different ML algorithms</code> and then compare (atleast 2 new algorithm).</li>
+  <li><code class="highlighter-rouge">Train</code> the <code class="highlighter-rouge">classifier</code> with the <code class="highlighter-rouge">train</code> dataset</li>
+  <li><code class="highlighter-rouge">Test</code> the <code class="highlighter-rouge">classifier</code> with the <code class="highlighter-rouge">Test</code> dataset</li>
+  <li><code class="highlighter-rouge">Visualize</code> the datapoint where there is <code class="highlighter-rouge">miss-classification</code>.</li>
+  <li>Plot a <code class="highlighter-rouge">scatter graph</code> choosing any two features or try all combinations.</li>
+</ul>
+
+<h3 id="load-csv-file-with-numpy">Load CSV file with Numpy</h3>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="n">filename</span><span class="o">=</span><span class="s">"data/pima-indians-diabetes.data"</span>
+<span class="n">raw_data</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span><span class="s">'r'</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">raw_data</span><span class="p">,</span><span class="n">delimiter</span><span class="o">=</span><span class="s">','</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</code></pre>
 </div>
+
+<h3 id="loading-csv-file-with-pandas">Loading CSV File with Pandas</h3>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span>
+<span class="n">filename</span><span class="o">=</span><span class="s">"data/pima-indians-diabetes.data"</span>
+<span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s">'preg'</span><span class="p">,</span><span class="s">'plas'</span><span class="p">,</span><span class="s">'pres'</span><span class="p">,</span><span class="s">'skin'</span><span class="p">,</span><span class="s">'test'</span><span class="p">,</span><span class="s">'mass'</span><span class="p">,</span><span class="s">'pedi'</span><span class="p">,</span><span class="s">'age'</span><span class="p">,</span><span class="s">'class'</span><span class="p">]</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span><span class="n">names</span><span class="o">=</span><span class="n">names</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+</code></pre>
+</div>
+
+
+  </div>
+
+</article>
 
       </div>
     </main>
