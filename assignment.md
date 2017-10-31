@@ -17,7 +17,7 @@ The task are as follows:-
  - `Train` the `classifier` with the `train` dataset
  - `Test` the `classifier` with the `Test` dataset
  - `Visualize` the datapoint where there is `miss-classification`.
- - Plot a `scatter graph` choosing any two features or try all combinations.
+ - Plot the data using `scatter plot` by choosing any two features or try all combinations.
 
 
 ### Load CSV file with Numpy
