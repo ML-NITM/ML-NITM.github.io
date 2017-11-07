@@ -13,7 +13,7 @@ The task are as follows:-
  - Study the `dataset` and identify `features` and `classes`. 
  - Load the dataset using either `numpy` or `pandas` (Tips is given below)
  - Split the dataset into `train(75%)` and `test(25%)`, do some experiment by varying the `train(x%)` and the `test(%y)` 
- - Build a `classifier` using `sklearn` library, you may use `KNNClassifier` and `try different ML algorithms` and then compare (atleast 2 new algorithm). 
+ - Build a `classifier` using `sklearn` library, you may use `KNNClassifier` and `try different ML algorithms` and compare (atleast 2 new algorithm). 
  - `Train` the `classifier` with the `train` dataset
  - `Test` the `classifier` with the `Test` dataset
  - `Visualize` the datapoint where there is `miss-classification`.
@@ -41,4 +41,17 @@ data = pandas.read_csv(filename,names=names)
 print(data.shape)
 
 ```
+
+## Assignment - 2 
+07-11-2017 ( Tuesday)
+
+This assignment is to get familiar with data pre-processing steps. You need to do the following steps:-
+ - Download dataset from [meg-agri](https://data.gov.in/catalog/monthly-market-arrival-agricultural-produce)
+ - Study and identify the features.
+ - Study and identify target classes
+ - Convert Categorial value to Numerical value (hint : 
+ ```use from sklearn.preprocessing import LabelEncoder```
+ 
+ - Perform Machine Learning tasks and do prediction.
+
 
